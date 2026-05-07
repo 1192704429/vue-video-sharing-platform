@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.video.server.dao.VideoUserDao">
+
+    <select id="findList" parameterType="com.video.server.dto.VideoUserDTO" resultType="com.video.server.dto.VideoUserDTO">
+        select
+        videoUser.*
+        from video_user videoUser
+        <where>
+            <if test="id != null and id != ''">and videoUser.id = #{id}</if>
+            <if test="account != null and account != ''">and videoUser.account = #{account}</if>
+            <if test="password != null and password != ''">and videoUser.password = #{password}</if>
+            <if test="nickName != null and nickName != ''">and videoUser.nick_name like concat('%',#{nickName},'%')</if>
+            <if test="headImg != null and headImg != ''">and videoUser.head_img = #{headImg}</if>
+            <if test="createTime != null and createTime != ''">and videoUser.create_time = #{createTime}</if>
+        </where>
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.video.server.dto.VideoUserDTO" resultType="java.lang.Integer">
+        select count(*) from video_user videoUser
+        <where>
+            <if test="id != null and id != ''">and videoUser.id = #{id}</if>
+            <if test="account != null and account != ''">and videoUser.account = #{account}</if>
+            <if test="password != null and password != ''">and videoUser.password = #{password}</if>
+            <if test="nickName != null and nickName != ''">and videoUser.nick_name like concat('%',#{nickName},'%')</if>
+            <if test="headImg != null and headImg != ''">and videoUser.head_img = #{headImg}</if>
+            <if test="createTime != null and createTime != ''">and videoUser.create_time = #{createTime}</if>
+        </where>
+    </select>
+
+</mapper>

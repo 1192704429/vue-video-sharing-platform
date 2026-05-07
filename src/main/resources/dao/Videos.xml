@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.video.server.dao.VideosDao">
+
+    <select id="findList" parameterType="com.video.server.dto.VideosDTO" resultType="com.video.server.dto.VideosDTO">
+        select
+        videos.*,
+        videoType.type_name,
+        videoUser.nick_name,
+        videoUser.head_img,
+        COALESCE(videoCommentCount.comment_count, 0) AS comment_count
+        from videos videos
+        left join video_type videoType on videos.type_id = videoType.id
+		left join video_user videoUser on videos.user_id = videoUser.id
+        LEFT JOIN (
+        SELECT videos_id, COUNT(*) AS comment_count
+        FROM video_comment
+        GROUP BY  videos_id
+        ) AS videoCommentCount ON videos.id = videoCommentCount.videos_id
+        <where>
+            <if test="id != null and id != ''">and videos.id = #{id}</if>
+            <if test="videoName != null and videoName != ''">and videos.video_name like concat('%',#{videoName},'%') or videos.video_info like concat('%',#{videoName},'%')</if>
+            <if test="videoInfo != null and videoInfo != ''">and videos.video_info like concat('%',#{videoName},'%')</if>
+            <if test="bannerImg != null and bannerImg != ''">and videos.banner_img = #{bannerImg}</if>
+            <if test="videoUrl != null and videoUrl != ''">and videos.video_url = #{videoUrl}</if>
+            <if test="createTime != null and createTime != ''">and videos.create_time = #{createTime}</if>
+            <if test="typeId != null and typeId != ''">and videos.type_id = #{typeId}</if>
+            <if test="clickNum != null and clickNum != ''">and videos.click_num = #{clickNum}</if>
+            <if test="collectNum != null and collectNum != ''">and videos.collect_num = #{collectNum}</if>
+            <if test="userId != null and userId != ''">and videos.user_id = #{userId}</if>
+            <if test="status != null and status != ''">and videos.status = #{status}</if>
+            <if test="typeName != null and typeName != ''">and videoType.type_name like concat('%',#{typeName},'%')</if>
+            <if test="nickName != null and nickName != ''">and videoUser.nick_name like concat('%',#{nickName},'%')</if>
+            <if test="headImg != null and headImg != ''">and videoUser.head_img = #{headImg}</if>
+        </where>
+        order by collect_num,click_num,comment_count desc
+        <if test="current != null and pageSize != null">
+            limit #{current},#{pageSize}
+        </if>
+    </select>
+
+    <select id="findPageCount" parameterType="com.video.server.dto.VideosDTO" resultType="java.lang.Integer">
+        select count(*) from videos videos
+        left join video_type videoType on videos.type_id = videoType.id
+		left join video_user videoUser on videos.user_id = videoUser.id
+        <where>
+            <if test="id != null and id != ''">and videos.id = #{id}</if>
+            <if test="videoName != null and videoName != ''">and videos.video_name like concat('%',#{videoName},'%')</if>
+            <if test="videoInfo != null and videoInfo != ''">and videos.video_info like concat('%',#{videoName},'%')</if>
+            <if test="bannerImg != null and bannerImg != ''">and videos.banner_img = #{bannerImg}</if>
+            <if test="videoUrl != null and videoUrl != ''">and videos.video_url = #{videoUrl}</if>
+            <if test="createTime != null and createTime != ''">and videos.create_time = #{createTime}</if>
+            <if test="typeId != null and typeId != ''">and videos.type_id = #{typeId}</if>
+            <if test="clickNum != null and clickNum != ''">and videos.click_num = #{clickNum}</if>
+            <if test="collectNum != null and collectNum != ''">and videos.collect_num = #{collectNum}</if>
+            <if test="userId != null and userId != ''">and videos.user_id = #{userId}</if>
+            <if test="status != null and status != ''">and videos.status = #{status}</if>
+            <if test="typeName != null and typeName != ''">and videoType.type_name like concat('%',#{typeName},'%')</if>
+            <if test="nickName != null and nickName != ''">and videoUser.nick_name like concat('%',#{nickName},'%')</if>
+            <if test="headImg != null and headImg != ''">and videoUser.head_img = #{headImg}</if>
+        </where>
+    </select>
+
+</mapper>
