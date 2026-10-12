@@ -18,7 +18,7 @@
 | 用户端 | 注册用户 | 登录后浏览视频、观看、点赞、评论、收藏、上传视频，管理个人中心 |
 
 
-![功能模块图](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/azhou_promotion/img/module_structure/func_module_a693ea8c070e4fac8465ab9d1302575e.png)
+![功能模块图](docs/images/01-func-module.png)
 
 
 ## 三、技术栈说明
@@ -45,35 +45,35 @@
 
 登录页：管理员输入账号密码登录后台
 
-![登录页：管理员输入账号密码登录后台](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/2ddf639b-e2bf-45d3-8dc6-2b6052e05268.png)
+![登录页：管理员输入账号密码登录后台](docs/images/02-deng-lu.png)
 
 轮播图管理页：维护平台轮播图，支持增删改操作
 
-![轮播图管理页：维护平台轮播图，支持增删改操作](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/0d34c6e1-1575-42b8-826f-dfd1fedc52d2.png)
+![轮播图管理页：维护平台轮播图，支持增删改操作](docs/images/03-lun-bo-tu-guan-li.png)
 
 分类管理页：对科普视频的分类信息进行管理
 
-![分类管理页：对科普视频的分类信息进行管理](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/511d5f5f-fb23-4ed8-846a-6faf07a310cd.png)
+![分类管理页：对科普视频的分类信息进行管理](docs/images/04-fen-lei-guan-li.png)
 
 公告管理页：管理员查看、编辑、删除平台系统公告
 
-![公告管理页：管理员查看、编辑、删除平台系统公告](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/910a4109-43d7-4bc2-8e0a-edaf360552d6.png)
+![公告管理页：管理员查看、编辑、删除平台系统公告](docs/images/05-gong-gao-guan-li.png)
 
 公告管理页：修改平台系统公告的内容及相关信息
 
-![公告管理页：修改平台系统公告的内容及相关信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/41f3aff0-bd91-47bd-831d-fd91a2f838eb.png)
+![公告管理页：修改平台系统公告的内容及相关信息](docs/images/06-gong-gao-guan-li.png)
 
 视频管理页：对平台用户上传的视频进行管理与审核
 
-![视频管理页：对平台用户上传的视频进行管理与审核](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/c2c95ed2-d28e-4ec1-8a84-89d27f354e72.png)
+![视频管理页：对平台用户上传的视频进行管理与审核](docs/images/07-shi-pin-guan-li.png)
 
 评论管理页：管理员查看并管理平台的用户评论
 
-![评论管理页：管理员查看并管理平台的用户评论](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/a1c11b1e-fae3-4d9b-87dd-fe7ab25790af.png)
+![评论管理页：管理员查看并管理平台的用户评论](docs/images/08-ping-lun-guan-li.png)
 
 收藏管理页：管理员查看并管理平台内的用户收藏数据
 
-![收藏管理页：管理员查看并管理平台内的用户收藏数据](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/d17bf416-4eef-421e-8c80-f734a4b52f6f.png)
+![收藏管理页：管理员查看并管理平台内的用户收藏数据](docs/images/09-shou-cang-guan-li.png)
 
 
 ###### 用户端
@@ -89,47 +89,47 @@
 
 注册页：填写信息，完成科普视频平台账号注册
 
-![注册页：填写信息，完成科普视频平台账号注册](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/b4dc5759-8d59-4037-86a7-0d2881b02804.png)
+![注册页：填写信息，完成科普视频平台账号注册](docs/images/10-zhu-ce.png)
 
 登录页：用户输入账号密码登录科普视频分享创作平台
 
-![登录页：用户输入账号密码登录科普视频分享创作平台](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/276f4304-6772-4817-8f58-1206def2f5b1.png)
+![登录页：用户输入账号密码登录科普视频分享创作平台](docs/images/11-deng-lu.png)
 
 首页：展示轮播和推荐科普视频，供用户浏览
 
-![首页：展示轮播和推荐科普视频，供用户浏览](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/3811eb98-5f71-43ee-84cd-fd41fd861e38.png)
+![首页：展示轮播和推荐科普视频，供用户浏览](docs/images/12-shou-ye.png)
 
 公告列表页：浏览平台发布的所有系统公告
 
-![公告列表页：浏览平台发布的所有系统公告](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/b02692e5-5ae4-408e-83be-bc975a3bacc1.png)
+![公告列表页：浏览平台发布的所有系统公告](docs/images/13-gong-gao-lie-biao.png)
 
 公告详情页：展示开放用户反馈渠道的公告详情
 
-![公告详情页：展示开放用户反馈渠道的公告详情](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/e049f56d-1aff-4188-8377-d3d65f7b4afc.png)
+![公告详情页：展示开放用户反馈渠道的公告详情](docs/images/14-gong-gao-xiang-qing.png)
 
 视频列表页：按分类浏览科普视频，支持搜索筛选
 
-![视频列表页：按分类浏览科普视频，支持搜索筛选](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/99276928-f83b-420c-86c5-c93917501c4a.png)
+![视频列表页：按分类浏览科普视频，支持搜索筛选](docs/images/15-shi-pin-lie-biao.png)
 
 视频详情页：展示视频详情，支持用户评论互动
 
-![视频详情页：展示视频详情，支持用户评论互动](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/2e1a7daf-7585-48d4-86d0-da645fbe640c.png)
+![视频详情页：展示视频详情，支持用户评论互动](docs/images/16-shi-pin-xiang-qing.png)
 
 视频详情页：用户观看科普视频，查看视频详情内容
 
-![视频详情页：用户观看科普视频，查看视频详情内容](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/7e1360a3-16e5-420c-841f-e698908b9f52.png)
+![视频详情页：用户观看科普视频，查看视频详情内容](docs/images/17-shi-pin-xiang-qing.png)
 
 视频发布页：填写视频信息，提交上传待审核视频
 
-![视频发布页：填写视频信息，提交上传待审核视频](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/0493288e-9f84-47ab-8f72-ba1ce1b5af3d.png)
+![视频发布页：填写视频信息，提交上传待审核视频](docs/images/18-shi-pin-fa-bu.png)
 
 我的发布：查看个人发布视频及审核状态，可编辑删除
 
-![我的发布：查看个人发布视频及审核状态，可编辑删除](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/a12d9f9c-7dbf-495a-8698-7d150d80f28c.png)
+![我的发布：查看个人发布视频及审核状态，可编辑删除](docs/images/19-wo-de-fa-bu.png)
 
 个人资料页：维护修改个人账号的基础信息
 
-![个人资料页：维护修改个人账号的基础信息](https://code-graden-server-dev.oss-cn-beijing.aliyuncs.com/2026-05-07/3037180b-9002-4a55-8a60-fe947f8dedc4.png)
+![个人资料页：维护修改个人账号的基础信息](docs/images/20-ge-ren-zi-liao.png)
 
 
 ## 五、主要业务流程
